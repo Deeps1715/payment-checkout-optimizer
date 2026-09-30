@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Payment Processing</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            Checkout Lab
+        </div>
+
+        <div class="header-note">
+            Secure checkout concept
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <div class="progress">
+
+            <div class="progress-step completed">
+
+                <span>✓</span>
+
+                Cart
+
+            </div>
+
+
+            <div class="progress-line"></div>
+
+
+            <div class="progress-step active">
+
+                <span>2</span>
+
+                Payment
+
+            </div>
+
+
+            <div class="progress-line"></div>
+
+
+            <div class="progress-step">
+
+                <span>3</span>
+
+                Confirmation
+
+            </div>
+
+        </div>
+
+
+        <section class="state-card">
+
+
+            <div class="processing-icon">
+
+                ⏳
+
+            </div>
+
+
+            <div class="eyebrow">
+
+                PAYMENT PROCESSING
+
+            </div>
+
+
+            <h1>
+
+                We're confirming your payment
+
+            </h1>
+
+
+            <p class="state-message">
+
+                Your payment request is being processed.
+                Please don't make another payment yet.
+
+            </p>
+
+
+            <div class="state-info">
+
+                <div>
+
+                    <span>
+                        Payment method
+                    </span>
+
+                    <strong id="paymentMethod">
+                        UPI
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Amount
+                    </span>
+
+                    <strong>
+                        ₹2,499
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="continue-button"
+                id="checkStatus"
+            >
+
+                Check Payment Status
+
+            </button>
+
+
+            <p class="demo-note">
+
+                Demo portfolio project — no real payment
+                is being processed.
+
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script>
+
+        const savedMethod =
+            localStorage.getItem("paymentMethod");
+
+
+        if (savedMethod) {
+
+            document.getElementById(
+                "paymentMethod"
+            ).textContent = savedMethod;
+
+        }
+
+
+        document
+            .getElementById("checkStatus")
+            .addEventListener(
+                "click",
+                function () {
+
+                    window.location.href =
+                        "confirmation.html";
+
+                }
+            );
+
+    </script>
+
+
+</body>
+
+</html>

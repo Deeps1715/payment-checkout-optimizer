@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Payment Confirmation</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            Checkout Lab
+        </div>
+
+        <div class="header-note">
+            Secure checkout concept
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <!-- PROGRESS -->
+
+        <div class="progress confirmation-progress">
+
+            <button
+    class="progress-step completed progress-link"
+    onclick="window.location.href='cart.html'"
+>
+
+    <span>✓</span>
+
+    Cart
+
+</button>
+
+
+            <div class="progress-line completed-line"></div>
+
+
+            <button
+    class="progress-step completed progress-link"
+    onclick="window.location.href='index.html'"
+>
+
+    <span>✓</span>
+
+    Payment
+
+</button>
+
+
+            <div class="progress-line completed-line"></div>
+
+
+            <div class="progress-step active">
+
+                <span>3</span>
+
+                Confirmation
+
+            </div>
+
+        </div>
+
+
+        <!-- CONFIRMATION CARD -->
+
+        <section class="confirmation-card">
+
+
+            <!-- SUCCESS ICON -->
+
+            <div class="success-icon">
+
+                ✓
+
+            </div>
+
+
+            <div class="eyebrow">
+
+                PAYMENT COMPLETE
+
+            </div>
+
+
+            <h1>
+
+                Payment successful
+
+            </h1>
+
+
+            <p class="confirmation-message">
+
+                Your payment has been confirmed and your
+                order has been successfully placed.
+
+            </p>
+
+
+            <!-- PAYMENT DETAILS -->
+
+            <div class="confirmation-details">
+
+
+                <div class="confirmation-row">
+
+                    <span>
+                        Payment ID
+                    </span>
+
+                    <strong id="paymentId">
+                        CHK-20260921-48291
+                    </strong>
+
+                </div>
+
+
+                <div class="confirmation-row">
+
+                    <span>
+                        Amount
+                    </span>
+
+                    <strong>
+                        ₹2,499
+                    </strong>
+
+                </div>
+
+
+                <div class="confirmation-row">
+
+                    <span>
+                        Payment method
+                    </span>
+
+                    <strong id="paymentMethod">
+                        UPI
+                    </strong>
+
+                </div>
+
+
+                <div class="confirmation-row">
+
+                    <span>
+                        Order status
+                    </span>
+
+                    <strong class="status-confirmed">
+                        Confirmed
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ORDER SUMMARY -->
+
+            <div class="confirmed-order">
+
+                <div class="section-label">
+
+                    ORDER
+
+                </div>
+
+
+                <div class="confirmed-product">
+
+                    <div class="product-image">
+
+                        🎧
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Wireless Headphones
+                        </strong>
+
+                        <span>
+                            Quantity: 1
+                        </span>
+
+                    </div>
+
+
+                    <strong>
+                        ₹2,499
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTINUE -->
+
+            <button
+                id="continueShopping"
+                class="continue-button"
+            >
+
+                Continue Shopping
+
+            </button>
+
+
+            <p class="demo-note">
+
+                Demo portfolio project — no real payment
+                has been processed.
+
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script>
+
+        /*
+            Read the selected payment method
+            from the previous payment page.
+        */
+
+        const savedMethod =
+            localStorage.getItem("paymentMethod");
+
+
+        if (savedMethod) {
+
+            document.getElementById(
+                "paymentMethod"
+            ).textContent = savedMethod;
+
+        }
+
+
+        /*
+            Generate a demo payment ID.
+        */
+
+        const paymentId =
+            "CHK-" +
+            Date.now();
+
+
+        document.getElementById(
+            "paymentId"
+        ).textContent = paymentId;
+
+
+        /*
+            Continue Shopping
+        */
+
+        document
+            .getElementById("continueShopping")
+            .addEventListener("click", () => {
+
+                localStorage.removeItem(
+                    "paymentMethod"
+                );
+
+                window.location.href =
+                    "index.html";
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>

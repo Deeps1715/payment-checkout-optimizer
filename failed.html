@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Payment Failed</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            Checkout Lab
+        </div>
+
+        <div class="header-note">
+            Secure checkout concept
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <div class="progress">
+
+            <div class="progress-step completed">
+
+                <span>✓</span>
+
+                Cart
+
+            </div>
+
+
+            <div class="progress-line"></div>
+
+
+            <div class="progress-step active">
+
+                <span>2</span>
+
+                Payment
+
+            </div>
+
+
+            <div class="progress-line"></div>
+
+
+            <div class="progress-step">
+
+                <span>3</span>
+
+                Confirmation
+
+            </div>
+
+        </div>
+
+
+        <section class="state-card">
+
+
+            <div class="failed-icon">
+
+                !
+
+            </div>
+
+
+            <div class="eyebrow">
+
+                PAYMENT NOT COMPLETED
+
+            </div>
+
+
+            <h1>
+
+                We couldn't complete your payment
+
+            </h1>
+
+
+            <p class="state-message">
+
+                Your payment could not be confirmed.
+                You can try again using the same or
+                another payment method.
+
+            </p>
+
+
+            <div class="state-info">
+
+                <div>
+
+                    <span>
+                        Payment method
+                    </span>
+
+                    <strong id="paymentMethod">
+                        UPI
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Amount
+                    </span>
+
+                    <strong>
+                        ₹2,499
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="continue-button"
+                id="tryAgain"
+            >
+
+                Try Again
+
+            </button>
+
+
+            <p class="demo-note">
+
+                Demo portfolio project — no real payment
+                was processed.
+
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script>
+
+        const savedMethod =
+            localStorage.getItem("paymentMethod");
+
+
+        if (savedMethod) {
+
+            document.getElementById(
+                "paymentMethod"
+            ).textContent = savedMethod;
+
+        }
+
+
+        document
+            .getElementById("tryAgain")
+            .addEventListener(
+                "click",
+                function () {
+
+                    window.location.href =
+                        "index.html";
+
+                }
+            );
+
+    </script>
+
+
+</body>
+
+</html>

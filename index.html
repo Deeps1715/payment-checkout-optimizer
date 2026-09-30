@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Payment Checkout Optimizer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            Checkout Lab
+        </div>
+
+        <div class="header-note">
+            Secure checkout concept
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="eyebrow">
+                PRODUCT DESIGN · PAYMENT UX
+            </div>
+
+            <h1>
+                Payment Checkout
+                Optimizer
+            </h1>
+
+            <p>
+                A customer-focused checkout designed to make
+                payment states clear and recovery safer.
+            </p>
+
+        </section>
+
+
+        <!-- CHECKOUT -->
+
+        <section class="checkout-layout">
+
+
+            <!-- MAIN CHECKOUT -->
+
+            <div class="checkout-card">
+
+
+                <!-- PROGRESS -->
+
+                <div class="progress checkout-progress">
+
+    <button
+    class="progress-step completed progress-link"
+    onclick="window.location.href='cart.html'"
+>
+
+    <span>✓</span>
+
+    Cart
+
+</button>
+
+    <div class="progress-line completed-line"></div>
+
+
+    <div class="progress-step active">
+
+        <span>2</span>
+
+        Payment
+
+    </div>
+
+
+    <div class="progress-line"></div>
+
+
+    <div class="progress-step">
+
+        <span>3</span>
+
+        Confirmation
+
+    </div>
+
+</div>
+                <!-- ORDER SUMMARY -->
+
+                <section class="order-section">
+
+                    <div class="section-label">
+                        YOUR ORDER
+                    </div>
+
+                    <div class="product-row">
+
+                        <div class="product-info">
+
+                            <div class="product-image">
+                                🎧
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Wireless Headphones
+                                </strong>
+
+                                <span>
+                                    Quantity: 1
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            ₹2,499
+                        </strong>
+
+                    </div>
+
+
+                    <div class="price-row">
+
+                        <span>
+                            Item total
+                        </span>
+
+                        <span>
+                            ₹2,499
+                        </span>
+
+                    </div>
+
+
+                    <div class="price-row">
+
+                        <span>
+                            Delivery
+                        </span>
+
+                        <span>
+                            Free
+                        </span>
+
+                    </div>
+
+
+                    <div class="total-row">
+
+                        <strong>
+                            Total
+                        </strong>
+
+                        <strong>
+                            ₹2,499
+                        </strong>
+
+                    </div>
+
+                </section>
+
+
+                <!-- PAYMENT SECTION -->
+
+                <section class="payment-section">
+
+                    <div class="section-label">
+                        PAYMENT METHOD
+                    </div>
+
+                    <h2>
+                        How would you like to pay?
+                    </h2>
+
+
+                    <!-- PAYMENT METHODS -->
+
+                    <div class="payment-methods">
+
+
+                        <button
+                            class="payment-method active"
+                            data-method="UPI"
+                        >
+
+                            <span class="method-icon">
+                                U
+                            </span>
+
+                            <span class="method-content">
+
+                                <strong>
+                                    UPI
+                                </strong>
+
+                                <small>
+                                    Pay using your UPI app
+                                </small>
+
+                            </span>
+
+                            <span class="radio"></span>
+
+                        </button>
+
+
+                        <button
+                            class="payment-method"
+                            data-method="Card"
+                        >
+
+                            <span class="method-icon">
+                                💳
+                            </span>
+
+                            <span class="method-content">
+
+                                <strong>
+                                    Card
+                                </strong>
+
+                                <small>
+                                    Credit or debit card
+                                </small>
+
+                            </span>
+
+                            <span class="radio"></span>
+
+                        </button>
+
+
+                        <button
+                            class="payment-method"
+                            data-method="Wallet"
+                        >
+
+                            <span class="method-icon">
+                                W
+                            </span>
+
+                            <span class="method-content">
+
+                                <strong>
+                                    Wallet
+                                </strong>
+
+                                <small>
+                                    Pay using a digital wallet
+                                </small>
+
+                            </span>
+
+                            <span class="radio"></span>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <!-- UPI INPUT -->
+
+                    <div
+                        id="upiSection"
+                        class="input-section"
+                    >
+
+                        <label for="upi">
+                            UPI ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="upi"
+                            value="demo@upi"
+                            placeholder="example@upi"
+                        >
+
+                        <small class="input-help">
+                            Example: yourname@upi
+                        </small>
+
+                    </div>
+
+
+                    <!-- CARD INPUT -->
+
+                    <div
+                        id="cardSection"
+                        class="input-section hidden"
+                    >
+
+                        <label for="card">
+                            Card number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="card"
+                            placeholder="1234 5678 9012 3456"
+                        >
+
+                        <div class="card-fields">
+
+                            <input
+                                type="text"
+                                placeholder="MM / YY"
+                            >
+
+                            <input
+                                type="text"
+                                placeholder="CVV"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- WALLET -->
+
+                    <div
+                        id="walletSection"
+                        class="wallet-section hidden"
+                    >
+
+                        <div class="wallet-message">
+
+                            <strong>
+                                Wallet payment
+                            </strong>
+
+                            <span>
+                                You will be redirected to your wallet
+                                provider to complete payment.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="demo-outcome">
+
+    <div class="section-label">
+        DEMO PAYMENT OUTCOME
+    </div>
+
+    <p>
+        Choose what happens after payment for this prototype.
+    </p>
+
+    <label>
+        <input
+            type="radio"
+            name="paymentOutcome"
+            value="success"
+            checked
+        >
+        Success
+    </label>
+
+    <label>
+        <input
+            type="radio"
+            name="paymentOutcome"
+            value="processing"
+        >
+        Processing
+    </label>
+
+    <label>
+        <input
+            type="radio"
+            name="paymentOutcome"
+            value="failed"
+        >
+        Failed
+    </label>
+
+</div>
+                    <!-- PAY BUTTON -->
+
+                    <button
+                        id="payButton"
+                        class="pay-button"
+                    >
+
+                        Pay ₹2,499
+
+                    </button>
+
+
+                    <div class="security-note">
+
+                        🔒 Your payment information is protected.
+                        Demo only — no real money is transferred.
+
+                    </div>
+
+                </section>
+
+
+                <!-- PAYMENT STATUS -->
+
+                <section
+                    id="statusSection"
+                    class="status-section hidden"
+                >
+
+                    <div
+                        id="statusIcon"
+                        class="status-icon"
+                    >
+                        ✓
+                    </div>
+
+                    <h2 id="statusTitle">
+                        Payment successful
+                    </h2>
+
+                    <p id="statusMessage">
+                        Your order has been confirmed.
+                    </p>
+
+
+                    <div
+                        id="statusDetails"
+                        class="status-details"
+                    >
+
+                        <div>
+
+                            <span>
+                                Amount
+                            </span>
+
+                            <strong>
+                                ₹2,499
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Payment method
+                            </span>
+
+                            <strong id="statusMethod">
+                                UPI
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="statusActions"
+                        class="status-actions"
+                    >
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <aside class="trust-card">
+
+
+                <div class="eyebrow">
+                    DESIGNED FOR CONFIDENCE
+                </div>
+
+
+                <h3>
+                    What happens if something goes wrong?
+                </h3>
+
+
+                <div class="trust-item">
+
+                    <span class="trust-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Clear status
+                        </strong>
+
+                        <p>
+                            You always know whether your payment
+                            is processing, successful or needs attention.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="trust-item">
+
+                    <span class="trust-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Safe recovery
+                        </strong>
+
+                        <p>
+                            We avoid asking you to pay again
+                            when the transaction status is unclear.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="trust-item">
+
+                    <span class="trust-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Helpful next step
+                        </strong>
+
+                        <p>
+                            Every payment problem provides a
+                            clear action instead of a technical error.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIMER -->
+
+                <div class="timer-box">
+
+                    <span>
+                        Transaction state
+                    </span>
+
+                    <strong id="timer">
+                        Ready
+                    </strong>
+
+                </div>
+
+
+            </aside>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

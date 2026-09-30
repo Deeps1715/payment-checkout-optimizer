@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Your Cart</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            Checkout Lab
+        </div>
+
+        <div class="header-note">
+            Secure checkout concept
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <!-- HERO -->
+
+        <section class="hero cart-hero">
+
+            <div class="eyebrow">
+                CHECKOUT · STEP 1 OF 3
+            </div>
+
+            <h1>
+                Review your cart
+            </h1>
+
+            <p>
+                Check your items and order total before
+                continuing to payment.
+            </p>
+
+        </section>
+
+
+        <!-- PROGRESS -->
+
+        <div class="progress checkout-progress">
+
+
+            <div class="progress-step active">
+
+                <span>1</span>
+
+                Cart
+
+            </div>
+
+
+            <div class="progress-line"></div>
+
+
+            <div class="progress-step">
+
+                <span>2</span>
+
+                Payment
+
+            </div>
+
+
+            <div class="progress-line"></div>
+
+
+            <div class="progress-step">
+
+                <span>3</span>
+
+                Confirmation
+
+            </div>
+
+
+        </div>
+
+
+        <!-- CART LAYOUT -->
+
+        <section class="cart-layout">
+
+
+            <!-- CART ITEMS -->
+
+            <div class="cart-card">
+
+
+                <div class="section-label">
+                    YOUR ITEMS
+                </div>
+
+
+                <div class="cart-product">
+
+
+                    <div class="product-image large">
+                        🎧
+                    </div>
+
+
+                    <div class="cart-product-info">
+
+                        <strong>
+                            Wireless Headphones
+                        </strong>
+
+                        <span>
+                            Premium wireless audio
+                        </span>
+
+                        <span>
+                            Quantity: 1
+                        </span>
+
+                    </div>
+
+
+                    <strong class="cart-price">
+                        ₹2,499
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ORDER SUMMARY -->
+
+            <aside class="cart-summary">
+
+
+                <div class="section-label">
+                    ORDER SUMMARY
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Item total
+                    </span>
+
+                    <strong>
+                        ₹2,499
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Delivery
+                    </span>
+
+                    <strong>
+                        Free
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong>
+                        ₹2,499
+                    </strong>
+
+                </div>
+
+
+                <button
+                    id="continuePayment"
+                    class="continue-button"
+                >
+
+                    Continue to Payment
+
+                </button>
+
+
+                <p class="demo-note">
+
+                    Demo portfolio project — no real
+                    purchase will be made.
+
+                </p>
+
+
+            </aside>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script>
+
+        const continuePayment =
+            document.getElementById(
+                "continuePayment"
+            );
+
+
+        continuePayment.addEventListener(
+            "click",
+            function () {
+
+                window.location.href =
+                    "index.html";
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
